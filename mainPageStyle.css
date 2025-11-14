@@ -26,10 +26,13 @@
         text-transform: lowercase;
         text-align: center;
         transition:1s;
+        
+        margin:0.5em;
     }
     a:hover{
         text-decoration: underline wavy 2px ;
         text-shadow: 2px 2px 2px white;
+        transform: rotate(30deg);
     }
 }
 
