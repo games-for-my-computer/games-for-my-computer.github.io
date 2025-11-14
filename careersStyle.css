@@ -1,0 +1,15 @@
+
+#pageContent{
+    margin-left: 10vw;
+    transition:1s;
+    font-family: "Stack";
+}
+
+#pageContent:hover{
+    color:white;
+}
+
+@font-face{
+    font-family: "Stack";
+    src: url("fonts/StackSansNotch-VariableFont_wght.ttf");
+}
