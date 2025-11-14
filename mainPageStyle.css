@@ -1,0 +1,40 @@
+#mainLogo{
+    width: 100%;
+}
+
+#centerPiece{
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+    height:50vh;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+}
+
+#homePageLinks{
+    display:flex;
+    flex-direction: column;
+
+    a{
+        font-size: 4em;
+        font-family:'Cosplay', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration: none;
+        color:black;
+        text-transform: lowercase;
+        text-align: center;
+        transition:1s;
+    }
+    a:hover{
+        text-decoration: underline wavy 2px ;
+        text-shadow: 2px 2px 2px white;
+    }
+}
+
+@media (min-width: 600px) and (orientation:landscape)  {
+  #centerPiece{
+    flex-direction: row;
+  }
+}

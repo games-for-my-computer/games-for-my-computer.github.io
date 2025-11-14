@@ -1,3 +1,8 @@
 body{
-    background-color: red;
+    background-color:#9bfff1;
+}
+
+@font-face {
+    font-family: Cosplay;
+    src: url("fonts/Cosplay-Trial-Regular.otf") format("opentype");
 }
