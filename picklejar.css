@@ -1,0 +1,13 @@
+﻿body {
+    background-image: url("https://www.allrecipes.com/thmb/wlTjHoiv6BMPQHOKuSDMiYnCBKQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/9345169-0b6aefc5d51a412ba3c76811041a2bb9.jpg");
+    background-color: greenyellow;
+}
+
+#pageTitle {
+    margin-left: 50vw;
+    transition: 3s;
+}
+
+    #pageTitle:hover {
+        color: pink;
+    }
