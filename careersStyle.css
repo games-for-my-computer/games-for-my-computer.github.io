@@ -1,0 +1,12 @@
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#pageContent{
+    margin-left: 10vw;
+    transition:1s;
+}
+
+#pageContent:hover{
+    color:white;
+}
