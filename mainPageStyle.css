@@ -1,17 +1,15 @@
 #mainLogo{
     width: 100%;
-    transition: 1s;
+    transition: 1.5s
+cubic-bezier( 0.645, 0.045, 0.355, 1 );
 }
 
-#mainLogo:hover{
-    animation: wobble 4s ease-in-out infinite;
-}
 
 @keyframes wobble {
-  0%   {transform: rotate(0deg);}
+  
   25%  {transform: rotate(5deg);}
   75% {transform: rotate(-5deg);}
-  100% {transform: rotate(0deg);}
+
 }
 
 #centerPiece{
@@ -40,7 +38,8 @@
         color:black;
         text-transform: lowercase;
         text-align: right;
-        transition:1s;
+        transition: 1.5s
+cubic-bezier( 0.645, 0.045, 0.355, 1 );
         width:100%;
         margin:0.5em;
     }
