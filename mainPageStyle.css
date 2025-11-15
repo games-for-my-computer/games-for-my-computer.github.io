@@ -1,5 +1,17 @@
 #mainLogo{
     width: 100%;
+    transition: 1s;
+}
+
+#mainLogo:hover{
+    animation: wobble 4s ease-in-out infinite;
+}
+
+@keyframes wobble {
+  0%   {transform: rotate(0deg);}
+  25%  {transform: rotate(5deg);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
 }
 
 #centerPiece{
@@ -18,15 +30,18 @@
     display:flex;
     flex-direction: column;
 
+    div{
+        display: flex;
+    }
     a{
         font-size: 4em;
         font-family:'Cosplay', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-decoration: none;
         color:black;
         text-transform: lowercase;
-        text-align: center;
+        text-align: right;
         transition:1s;
-        
+        width:100%;
         margin:0.5em;
     }
     a:hover{
@@ -41,3 +56,4 @@
     flex-direction: row;
   }
 }
+
