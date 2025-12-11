@@ -1,7 +1,47 @@
+body{
+  /* background-image: url("backgroundTexture_deepRed.png");
+  background-size: 720px; */
+/*
+  background-image: url("Fabric082B_1K-JPG_Color.jpg");
+  background-size: 480px;
+  background-color: red;
+  background-blend-mode: hard-light; 
+*/
+margin:0;
+}
+
+.background{
+  width:100vw;
+  height:100vh;
+  position: relative;
+  z-index: -1;
+  transition: 1.5s;
+  /* filter:blur(5px); */
+}
+
+#mainBackground{
+  background-image: url("backgroundTexture_deepRed.png");
+  background-size: 720px;
+}
+
+#centerPiece:hover ~ #mainBackground{
+  filter:blur(2px);
+}
+/* 
+.link:hover ~ .link{
+  filter:blur(5px);
+} */
+
 #mainLogo{
     width: 100%;
     transition: 1.5s
-cubic-bezier( 0.645, 0.045, 0.355, 1 );
+    cubic-bezier( 0.645, 0.045, 0.355, 1 );
+    filter: drop-shadow(2px 2px 0px white);
+}
+
+#mainLogo:hover{
+    filter: drop-shadow(5px 5px 0px white);
+    scale:1.1;
 }
 
 @keyframes wobble {
@@ -21,7 +61,10 @@ cubic-bezier( 0.645, 0.045, 0.355, 1 );
     left:50%;
     transform: translate(-50%,-50%);
     justify-content: center;
+    
 }
+
+
 
 #homePageLinks{
     display:flex;
@@ -37,15 +80,17 @@ cubic-bezier( 0.645, 0.045, 0.355, 1 );
         color:black;
         text-transform: lowercase;
         text-align: right;
-        transition: 1.5s
+        transition: 1s
 cubic-bezier( 0.645, 0.045, 0.355, 1 );
         width:100%;
         margin:2vh;
+        text-shadow: 2px 2px 0px white;
     }
     a:hover{
         text-decoration: underline wavy 2px ;
-        text-shadow: 2px 2px 2px white;
-        transform: rotate(30deg);
+        text-shadow: 5px 5px 0px white;
+        transform: rotate(90deg);
+        scale:1.1;
     }
 }
 

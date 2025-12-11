@@ -21,7 +21,11 @@ function styleLinks(){
         // links[i].getElementsByTagName("a")[0].style.transform="rotate("+angle+"deg)";
         //var n=Math.round((links.length-Math.abs(links.length/2-i))/2)*2
         var n=Math.abs(Math.cos(angle*Math.PI/180))+Math.random()*0.01
-        links[i].getElementsByTagName("a")[0].style.transform="translate("+(-n*20+18)+"em"+",0)"+" rotate("+angle+"deg)";
+        if(links[i].matches(':hover')){
+          links[i].getElementsByTagName("a")[0].style.transform="translate("+(-n*20+18)+"em"+",0)"+" rotate("+((Math.random()-.5)*45)+"deg)";
+        }else{
+          links[i].getElementsByTagName("a")[0].style.transform="translate("+(-n*20+18)+"em"+",0)"+" rotate("+angle+"deg)";
+        }
         links[i].getElementsByTagName("a")[0].style.position="relative";
     }
 }
