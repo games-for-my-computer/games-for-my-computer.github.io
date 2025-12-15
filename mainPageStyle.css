@@ -1,43 +1,130 @@
+body{
+  /* background-image: url("backgroundTexture_deepRed.png");
+  background-size: 720px; */
+/*
+  background-image: url("Fabric082B_1K-JPG_Color.jpg");
+  background-size: 480px;
+  background-color: red;
+  background-blend-mode: hard-light; 
+*/
+margin:0;
+}
+
+.background{
+  width:100vw;
+  height:100vh;
+  position: relative;
+  z-index: -1;
+  transition: 1.5s;
+  /* filter:blur(5px); */
+}
+
+#mainBackground{
+  background-image: url("backgroundTexture_deepRed.png");
+  background-size: 720px;
+}
+
+#centerPiece:hover ~ #mainBackground{
+  filter:blur(2px);
+}
+/* 
+.link:hover ~ .link{
+  filter:blur(5px);
+} */
+
 #mainLogo{
     width: 100%;
+    transition: 1.5s
+    cubic-bezier( 0.645, 0.045, 0.355, 1 );
+    filter: drop-shadow(2px 2px 0px white);
+    object-fit: contain;
+}
+
+#mainLogo:hover{
+    filter: drop-shadow(5px 5px 0px white);
+    scale:1.1;
+    padding: 10px;
+}
+
+@keyframes wobble {
+  
+  25%  {transform: rotate(5deg);}
+  75% {transform: rotate(-5deg);}
+
 }
 
 #centerPiece{
     display: flex;
     flex-flow: column-reverse nowrap;
     align-items: center;
+    /*
     height:50vh;
+    */
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     justify-content: center;
+    height: 100%;
+
+    div{
+      margin:10px;
+    }
+    
 }
+
+#mainLogoContainer{
+  width:50vmax;
+  max-width: min(70vmin,40vmax);
+}
+
+
 
 #homePageLinks{
     display:flex;
     flex-direction: column;
 
+    div{
+        display: flex;
+    }
+    div:hover{
+      animation: tilt-n-move-shaking .2s infinite;
+    }
     a{
-        font-size: 4em;
+        font-size: min(8vw,4vh);
         font-family:'Cosplay', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-decoration: none;
         color:black;
         text-transform: lowercase;
         text-align: center;
-        transition:1s;
-        
-        margin:0.5em;
+        transition: 1s
+cubic-bezier( 0.645, 0.045, 0.355, 1 );
+        width:100%;
+        margin:1vh;
+        text-shadow: 2px 2px 0px white;
     }
     a:hover{
         text-decoration: underline wavy 2px ;
-        text-shadow: 2px 2px 2px white;
-        transform: rotate(30deg);
+        text-shadow: 5px 5px 0px white;
+        scale:1.1;
+        padding: 10px;
     }
 }
 
 @media (min-width: 600px) and (orientation:landscape)  {
   #centerPiece{
     flex-direction: row;
+    div{
+      margin: 0px;
+    }
+  }
+
+  #homePageLinks{
+    a{
+        text-align: right;
+        font-size:8vmin;
+        margin:2vh;
+    }
   }
 }
+
