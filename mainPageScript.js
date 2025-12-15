@@ -5,28 +5,35 @@ var centerY=0.5
 
 
 function styleLinks(){
-    var mainLogo=document.getElementById("mainLogo");
-    var logoRect=mainLogo.getBoundingClientRect();
-    var logoY=logoRect.top+(logoRect.bottom-logoRect.top);
-    var logoX=logoRect.left+(logoRect.right-logoRect.left);
+  var links=document.getElementById("homePageLinks").getElementsByTagName("div")
+    if(window.innerWidth>window.innerHeight){ //landscape mode
+      var mainLogo=document.getElementById("mainLogo");
+      var logoRect=mainLogo.getBoundingClientRect();
+      var logoY=logoRect.top+(logoRect.bottom-logoRect.top);
+      var logoX=logoRect.left+(logoRect.right-logoRect.left);
 
-    var links=document.getElementById("homePageLinks").getElementsByTagName("div")
-    var rotationAmount=7
-    for(var i=0;i<links.length;i++){
-        var angle=(links.length*rotationAmount/2-i*rotationAmount);
-        var rect=links[i].getBoundingClientRect();
-        var x=logoX-rect.left-(rect.right-rect.left)/2
-        var y=window.innerHeight*centerY-rect.top-(rect.bottom-rect.top)/2
-        angle=Math.round(Math.atan2(y,x)*180/Math.PI)+(Math.random()*10-5);
-        // links[i].getElementsByTagName("a")[0].style.transform="rotate("+angle+"deg)";
-        //var n=Math.round((links.length-Math.abs(links.length/2-i))/2)*2
-        var n=Math.abs(Math.cos(angle*Math.PI/180))+Math.random()*0.01
-        if(links[i].matches(':hover')){
-          links[i].getElementsByTagName("a")[0].style.transform="translate("+(-n*20+18)+"em"+",0)"+" rotate("+((Math.random()-.5)*33)+"deg)";
-        }else{
-          links[i].getElementsByTagName("a")[0].style.transform="translate("+(-n*20+18)+"em"+",0)"+" rotate("+angle+"deg)";
-        }
-        links[i].getElementsByTagName("a")[0].style.position="relative";
+      var rotationAmount=7
+      for(var i=0;i<links.length;i++){
+          var angle=(links.length*rotationAmount/2-i*rotationAmount);
+          var rect=links[i].getBoundingClientRect();
+          var x=logoX-rect.left-(rect.right-rect.left)/2
+          var y=window.innerHeight*centerY-rect.top-(rect.bottom-rect.top)/2
+          angle=Math.round(Math.atan2(y,x)*180/Math.PI)+(Math.random()*10-5);
+          // links[i].getElementsByTagName("a")[0].style.transform="rotate("+angle+"deg)";
+          //var n=Math.round((links.length-Math.abs(links.length/2-i))/2)*2
+          var n=Math.abs(Math.cos(angle*Math.PI/180))
+          var distanceFromCenter=15;
+          if(links[i].matches(':hover')){
+            links[i].getElementsByTagName("a")[0].style.transform="translate("+(distanceFromCenter*(.9-n))+"em"+",0)"+" rotate("+((Math.random()-.5)*15)+"deg)";
+          }else{
+            links[i].getElementsByTagName("a")[0].style.transform="translate("+(distanceFromCenter*(.9-n))+"em"+",0)"+" rotate("+angle+"deg)";
+          }
+          links[i].getElementsByTagName("a")[0].style.position="relative";
+      }
+    }else{
+      for(var i=0;i<links.length;i++){
+        links[i].getElementsByTagName("a")[0].style.transform="";
+      }
     }
 }
 
