@@ -18,7 +18,7 @@ body{
 
 
 
-  
+
 /***** subpage menu stuff *****/
 
 #subpageMenuBackground{
@@ -92,6 +92,7 @@ body{
         animation: tilt-n-move-shaking .2s infinite;
         opacity: 1;
         opacity:1;
+        scale:1.1;
     }
 
     #menuLogo{
@@ -135,6 +136,20 @@ body{
     margin: 64px;
 }
 
+#nourHead{
+    position: fixed;
+    bottom:16px;
+    right:16px;
+    width:64px;
+    transition:.5s;
+}
+
+
+#nourHead:hover{
+    animation: tilt-n-move-shaking .2s infinite;
+    scale:1.1;
+}
+
 @media (orientation:portrait)  {
     #subpageMenu{
         .subpageMenuItem{
@@ -147,3 +162,4 @@ body{
     }
 
 }
+
