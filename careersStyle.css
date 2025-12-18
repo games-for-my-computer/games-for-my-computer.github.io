@@ -3,13 +3,34 @@
     margin-left: 10vw;
     transition:1s;
     font-family: "Stack";
+    
 }
 
 #pageContent:hover{
-    color:white;
+    background: linear-gradient(to right, #14ffe9, #ffc800 , #ff00e0, #14ffe9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 3s  infinite;
+    background-size: 1200% 100%;
 }
 
 @font-face{
     font-family: "Stack";
     src: url("fonts/StackSansNotch-VariableFont_wght.ttf");
+}
+
+@keyframes rainbow_animation {
+    0%{
+        background-position: 0 0;
+        scale:1;
+    }
+    50%{
+        scale:1.1;
+    }
+
+    100% {
+        background-position: 100% 0;
+        scale:1;
+    }
 }
