@@ -1,5 +1,6 @@
 body{
-    background-color:#9bfff1;
+    background-color:#cc0a25;
+    margin: 0;
 }
 
 @font-face {
@@ -14,3 +15,79 @@ body{
     75% { transform: translate(-1px, 1px) rotate(-1deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
   }
+
+#subpageMenuContainer{
+    height: 64px;
+    width:100vw;
+    background-image: linear-gradient( 0deg,
+                #cc0a25, 
+                rgba(255, 255, 255, 0)
+            ), url("backgroundTexture_deepRed.png");
+    margin:0;
+    position: fixed;
+    top:0%;
+    left:0%;
+    align-content: center;
+
+}
+
+#subpageMenu{
+    font-size: min(8vw,4vh);
+    font-family:'Cosplay', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color:black;
+    text-transform: lowercase;
+
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    /*
+    height:50vh;
+    */
+    justify-content: space-evenly;
+    height: 100%;
+    width:100%;
+    max-width: 1200px;
+
+    border:20px;
+    text-shadow: 2px 2px 0px white;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    .subpageMenuItem{
+        height:100%;
+        align-content:center;
+        transition: .5s;
+    }
+
+    .subpageMenuItem:hover{
+        animation: tilt-n-move-shaking .2s infinite;
+        opacity: 1;
+    }
+
+    img{
+        height: 100%;
+        transition: 1.5s
+        cubic-bezier( 0.645, 0.045, 0.355, 1 );
+        filter: drop-shadow(2px 2px 0px white);
+        object-fit: contain;
+    }
+
+    #img:hover{
+        filter: drop-shadow(5px 5px 0px white);
+    }
+
+    a{
+        text-decoration: none;
+        color:black;
+        transition: 1s cubic-bezier( 0.645, 0.045, 0.355, 1 );
+        margin: auto;
+    }
+
+    a:hover{
+        text-decoration: underline wavy 2px ;
+        text-shadow: 5px 5px 0px white;
+    }
+}
