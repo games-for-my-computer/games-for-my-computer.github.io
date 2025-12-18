@@ -16,13 +16,31 @@ body{
     100% { transform: translate(0, 0) rotate(0deg); }
   }
 
+#subpageMenuBackground{
+    background-image: 
+        /* linear-gradient( 0deg,
+            #cc0a25, 
+            rgba(255, 255, 255, 0)
+        ),  */
+        url("backgroundTexture_deepRed.png");
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    opacity: .75;
+    -webkit-mask-image: linear-gradient(to bottom, black 25%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 25%, transparent 100%);
+    transition:.5s;
+}
+
+#subpageMenuContainer:hover > #subpageMenuBackground{
+    opacity: 1;
+}
+
 #subpageMenuContainer{
     height: 64px;
     width:100vw;
-    background-image: linear-gradient( 0deg,
-                #cc0a25, 
-                rgba(255, 255, 255, 0)
-            ), url("backgroundTexture_deepRed.png");
     margin:0;
     position: fixed;
     top:0%;
@@ -60,11 +78,27 @@ body{
         height:100%;
         align-content:center;
         transition: .5s;
+        overflow: visible;
+        opacity:0.5;
+        transition:.5s;
     }
 
     .subpageMenuItem:hover{
         animation: tilt-n-move-shaking .2s infinite;
         opacity: 1;
+        opacity:1;
+    }
+
+    #menuLogo{
+        opacity:.75;
+        transition:.5s;
+    }
+
+    #menuLogo:hover{
+        animation: tilt-n-move-shaking .2s infinite;
+        opacity: 1;
+        opacity:1;
+        scale:1.1;
     }
 
     img{
@@ -75,7 +109,7 @@ body{
         object-fit: contain;
     }
 
-    #img:hover{
+    img:hover{
         filter: drop-shadow(5px 5px 0px white);
     }
 
@@ -90,4 +124,21 @@ body{
         text-decoration: underline wavy 2px ;
         text-shadow: 5px 5px 0px white;
     }
+}
+
+#pageContent{
+    margin: 64px;
+}
+
+@media (orientation:portrait)  {
+    #subpageMenu{
+        .subpageMenuItem{
+            display: none;
+        }
+
+        #menuLogo{
+            display: block;
+        }
+    }
+
 }
