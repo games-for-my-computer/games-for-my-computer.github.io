@@ -1,5 +1,5 @@
 body{
-  /* background-image: url("backgroundTexture_deepRed.png");
+  /* background-image: url("images/backgroundTexture_deepRed.png");
   background-size: 720px; */
 /*
   background-image: url("Fabric082B_1K-JPG_Color.jpg");
@@ -20,7 +20,7 @@ margin:0;
 }
 
 #mainBackground{
-  background-image: url("backgroundTexture_deepRed.png");
+  background-image: url("images/backgroundTexture_deepRed.png");
   background-size: 720px;
 }
 

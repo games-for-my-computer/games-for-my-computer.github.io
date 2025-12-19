@@ -1,0 +1,36 @@
+#pageContent{
+    .project-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: 150px;
+
+        .project-item-image{
+            max-width: 45%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .project-item-text{
+            max-width: 40%;
+            margin-left: 5%;
+            text-align: left;
+        }
+    }
+
+    .laurels{
+        display: flex;
+        padding-top: 50px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .laurel{
+            width: 15%;
+        }
+    }
+}

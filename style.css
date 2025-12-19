@@ -50,7 +50,7 @@ body{
             #cc0a25, 
             rgba(255, 255, 255, 0)
         ),  */
-        url("backgroundTexture_deepRed.png");
+        url("images/backgroundTexture_deepRed.png");
     position: absolute;
     height: 100%;
     width: 100%;
@@ -167,6 +167,7 @@ body{
     line-height: 1.6em;
     
     h1{
+        font-family: 'Cosplay', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-shadow: 2px 2px 0px white;
         text-align: center;
         transition: 1s cubic-bezier( 0.645, 0.045, 0.355, 1 );
