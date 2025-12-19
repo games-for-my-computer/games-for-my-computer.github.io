@@ -8,6 +8,11 @@ body{
     src: url("fonts/Cosplay-Trial-Regular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: StackSansNotch;
+    src: url("fonts/StackSansNotch-VariableFont_wght.ttf") format("truetype");
+}
+
 @keyframes tilt-n-move-shaking {
     0% { transform: translate(0, 0) rotate(0deg); }
     25% { transform: translate(1px, 1px) rotate(1deg); }
@@ -16,6 +21,24 @@ body{
     100% { transform: translate(0, 0) rotate(0deg); }
   }
 
+.subpagecontainer {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
+  row-gap: 2px;
+  padding: 0%;
+  margin: auto;
+}
+
+.subpagecontainer div {
+  padding: 5px;
+  margin: auto;
+  text-align: center;
+  font-size: min(4vw,1.25vh);
+  font-family:'StackSansNotch', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  line-height: 1.4em;
+}
 
 
 
@@ -133,7 +156,39 @@ body{
 }
 
 #pageContent{
-    margin: 64px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+
+    font-size: min(4vw,2vh);
+    font-family:'StackSansNotch', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    line-height: 1.6em;
+    
+    h1{
+        text-shadow: 2px 2px 0px white;
+        text-align: center;
+        transition: 1s cubic-bezier( 0.645, 0.045, 0.355, 1 );
+    }
+
+    h1:hover{
+        text-decoration: underline wavy 2px;
+        text-shadow: 5px 5px 0px white;
+    }
+
+    img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    min-width: 50%;
+    filter: drop-shadow(0px 6px 6px black);
+    transition: transform 0.5s ease;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
 }
 
 #nourHead{
