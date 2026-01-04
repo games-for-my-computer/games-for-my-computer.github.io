@@ -105,3 +105,10 @@ function getCurrentRotation(el){
   }
   return 0;
 }
+
+document.getElementById("mainLogo").addEventListener("click",function(){
+  var elms=document.getElementsByClassName("hideOnMobile");
+  for(var i=0;i<elms.length;i++){
+    elms[i].classList.remove("hideOnMobile");
+  }
+})
