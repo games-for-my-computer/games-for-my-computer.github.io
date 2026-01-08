@@ -87,12 +87,20 @@ height:100vh;
 #mainLogoContainer{
   width:50vmax;
   max-width: min(70vmin,40vmax);
+  transition:0.3s;
 }
 
 
 #homePageLinks{
     display:flex;
     flex-direction: column;
+    transition: 0.3s;
+    height:auto;
+
+    .link{
+      transition: 0.3s;
+      height:100%;
+    }
 
     div{
         display: flex;
@@ -151,6 +159,7 @@ cubic-bezier( 0.645, 0.045, 0.355, 1 );
     height: 64px;
     margin:10px;
     transition:1s;
+    filter: drop-shadow(2px 2px 0px white);
 
     img{
       width: 100%;
@@ -166,6 +175,16 @@ cubic-bezier( 0.645, 0.045, 0.355, 1 );
 
 @media (orientation:portrait)  {
   .hideOnMobile{
-    display: none !important;
+    /*display: none !important;
+    */
+    max-height: 0 !important;
+    transform: scale(0);
+    overflow:hidden;
+  }
+  #externalLinksContainer{
+    .socialLink{
+      width: 12vw;
+      height: 12vw;
+    }
   }
 }
