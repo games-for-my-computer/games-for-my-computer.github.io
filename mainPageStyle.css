@@ -90,6 +90,73 @@ height:100vh;
   transition:0.3s;
 }
 
+.openForWorkBanner{
+  position:fixed;
+  white-space: nowrap;
+
+  font-size: 4vh;
+  font-family:'Cosplay', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  a{
+      text-decoration: none;
+      color:black;
+      transition: 1s cubic-bezier( 0.645, 0.045, 0.355, 1 );
+  }
+  a:hover{
+      text-decoration: underline wavy 2px ;
+      text-shadow: 5px 5px 0px white;
+      padding: 10px;
+  }
+}
+
+.openForWorkText{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+.infiniteScrollLeft{
+  white-space: nowrap;
+  animation: scroll-left 7s linear infinite;
+  max-width: none;
+}
+
+.infiniteScrollUp{
+  white-space: nowrap;
+  animation: scroll-up 7s linear infinite;
+  max-width: none;
+}
+
+.infiniteScrollDown{
+  white-space: nowrap;
+  animation: scroll-down 7s linear infinite;
+  max-width: none;
+}
+
+.verticalTextBT{
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+}
+
+.verticalTextTB{
+  writing-mode: sideways-rl;
+  text-orientation: mixed;
+}
+
+.openForWorkBanner.verticalTextTB{
+  right:0;
+}
+
+@media (orientation:portrait)  {
+  .openForWorkBanner.verticalTextTB{
+    display: none;
+  }
+
+  .openForWorkBanner.verticalTextBT{
+    display: none;
+  }
+}
 
 #homePageLinks{
     display:flex;
@@ -187,4 +254,47 @@ cubic-bezier( 0.645, 0.045, 0.355, 1 );
       height: 12vw;
     }
   }
+}
+
+
+
+/* Scrolling Animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
 }
